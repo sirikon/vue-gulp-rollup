@@ -25,7 +25,8 @@ module.exports = {
   inject: {
     target: './src/index.html',
     sources: [
-      './dist/bundle.js'
+      './dist/bundle.js',
+      './dist/main.css'
     ],
     dest: './dist'
   },
@@ -35,5 +36,12 @@ module.exports = {
       './src/**/*.vue',
       './gulp/**/*'
     ]
+  },
+  style: {
+    entry: './src/style/main.scss',
+    files: [
+      './src/style/**/*.scss'
+    ],
+    dest: './dist'
   }
 }
