@@ -4,7 +4,7 @@ Example project which uses Vue (.vue files), Gulp and Rollup
 
 ## Technical Decisions ##
 
- - __Gulp and Rollup__: Because are simpler and fits my needs.
+ - __Gulp and Rollup__: Because are simpler and fit my needs.
  - __Only using .vue files for javascript and template__: This is because having css/postcss/sass/less/whatever inside .vue files required some things I don't like:
    - Rollup plugin for Vue required some _not so clear_ code to get it working with SASS or LESS
    - Rollup plugin for Vue works nicely with CSS Modules, but at the moment I don't work with CSS Modules, and doesn't like at all the idea of `import clasNames from './style.css'`. 
