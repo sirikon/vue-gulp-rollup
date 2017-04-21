@@ -7,7 +7,11 @@ Example project which uses Vue (.vue files), Gulp and Rollup
 ```bash
 npm install
 
-npm 
+# Single build
+npm run build
+
+# Build and start watching for changes
+npm run dev
 ```
 
 ## Technical Decisions ##
