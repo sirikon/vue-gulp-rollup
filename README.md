@@ -29,6 +29,9 @@ npm run dev
  - __Building-related files (gulpfile.js and everything inside gulp folder) MUST run as-is in Node (No transpilation required)__: It's just unnecessary, latest node versions already have arrow functions, classes and all that fancy syntactic sugar, and doing `require()` instead of `import` isn't THAT bad, deal with it.
  - __Bublé__: From my experience, it's much faster and simpler than Babel, and plays well with Rollup ([just see the plugin implementation](https://gitlab.com/Rich-Harris/rollup-plugin-buble/blob/master/src/index.js)).
  - __npm dependencies versions with just minor patches__: You already know what SEMVER is and what the world thinks SEMVER is, so better be a bit more secure.
+ - __Dependencies should come only from NPM__: Don't accept a dependency that requires you to have things installed like Ruby or Python. Just Node.
+ - __Build process must be cross platform__: Yes, that includes Windows.
+ - __Focused to work on the latest Node LTS version__.
 
 ## License ##
 
