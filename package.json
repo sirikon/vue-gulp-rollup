@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "build": "gulp",
-    "dev": "gulp dev"
+    "dev": "gulp dev",
+    "test": "echo No tests specified yet && exit 0"
   },
   "author": "Carlos Fernández <sirikon2@gmail.com>",
   "license": "MIT",
