@@ -1,6 +1,4 @@
-# Vue Gulp Rollup #
-
-![dev dependencies](https://david-dm.org/sirikon/vue-gulp-rollup/dev-status.svg)
+# Vue Gulp Rollup [![CircleCI](https://circleci.com/gh/Sirikon/vue-gulp-rollup.svg?style=svg)](https://circleci.com/gh/Sirikon/vue-gulp-rollup) ![dev dependencies](https://david-dm.org/sirikon/vue-gulp-rollup/dev-status.svg) #
 
 Example project which uses Vue (.vue files), Gulp and Rollup
 
