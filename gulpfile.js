@@ -1,4 +1,4 @@
-'use strict';
+'use strict'
 
-const gulp = require('gulp');
-require('./gulp/index')(gulp);
+const gulp = require('gulp')
+require('./gulp/index')(gulp)

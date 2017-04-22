@@ -2,6 +2,7 @@
 
 const vue = require('rollup-plugin-vue')
 const rollup = require('rollup-stream')
+const buble = require('rollup-plugin-buble')
 const source = require('vinyl-source-stream')
 const buffer = require('vinyl-buffer')
 const addsrc = require('gulp-add-src')
@@ -14,7 +15,8 @@ module.exports = (gulp) => {
     return rollup({
       plugins: [
         vue({ css: false }),
-        fakeImport(config.bundle.fakeImports)
+        fakeImport(config.bundle.fakeImports),
+        buble()
       ],
       entry: config.bundle.entry,
       format: 'es'

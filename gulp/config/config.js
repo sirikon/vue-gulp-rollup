@@ -32,6 +32,7 @@ module.exports = {
   },
   lint: {
     files: [
+      './gulpfile.js',
       './src/**/*.js',
       './src/**/*.vue',
       './gulp/**/*'
