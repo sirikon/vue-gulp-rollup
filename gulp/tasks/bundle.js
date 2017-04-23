@@ -10,6 +10,8 @@ const concat = require('gulp-concat')
 const fakeImport = require('../rollup/fakeImport')
 const config = require('../config/config')
 
+var rollupCache
+
 module.exports = (gulp) => {
   gulp.task('bundle', function () {
     return rollup({
@@ -19,12 +21,14 @@ module.exports = (gulp) => {
         buble()
       ],
       entry: config.bundle.entry,
-      format: 'es'
+      format: 'es',
+      cache: rollupCache
     })
-      .pipe(source(config.bundle.destFileName))
-      .pipe(buffer())
-      .pipe(addsrc.prepend(config.bundle.vendors))
-      .pipe(concat(config.bundle.destFileName))
-      .pipe(gulp.dest(config.bundle.dest))
+    .on('bundle', bundle => { rollupCache = bundle })
+    .pipe(source(config.bundle.destFileName))
+    .pipe(buffer())
+    .pipe(addsrc.prepend(config.bundle.vendors))
+    .pipe(concat(config.bundle.destFileName))
+    .pipe(gulp.dest(config.bundle.dest))
   })
 }
